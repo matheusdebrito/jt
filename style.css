@@ -1,0 +1,219 @@
+*{margin:0px; padding:0px; font-family: Helvetica; color: #363636;}
+
+body{width: 100%;}
+
+#header{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height:10%;
+    background-color:rgba(0, 0, 0, 0.8);
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-mobile{display:none;}
+
+.link{
+    text-decoration:none;
+    color: #DAA520;
+    font-weight: bold;
+    border-bottom: solid 1px #DAA520;
+    margin: 0px 15px;
+    padding: 5px 15px;
+}
+
+#video-background{width:100%; z-index:0;}
+
+.video{width:100%;}
+
+#logo{
+    position:absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-img{
+    width:16%;
+    border-radius:150px;
+}
+
+#servicos{
+    width: 80%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7em;
+}
+
+.titulo-servicos{ 
+    margin-bottom: 3%;
+    padding: 30px;
+    border-bottom: solid 2px dimgray;
+    font-size: 3rem;
+    width: auto;
+}
+
+#servicos-2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0px;
+    font-size: 2rem;
+}
+
+.div-servico{
+    width: 50%;
+    line-height: 1.2em;
+}
+
+.paragrafo{ 
+    font-size: 6mm;
+    margin: 5%;
+    text-align: left;
+}
+
+#div-servico-1{border-right: solid 1px DimGray;}
+
+#sobre{
+    width: 80%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2.4em;
+}
+
+#sobre p{
+    width:60%;
+    text-align: left;
+    font-size: 6mm;
+    margin:0 auto;
+}
+
+.icone{
+    width: 3%;
+    margin:0 auto;
+}
+
+#endereco{
+    width: 80%;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 0px;
+    line-height: 2.4em;
+}
+
+#mapa{
+    width:100%;
+    height: 100%;
+    border:none;
+    box-shadow: 3px 3px 10px dimgray;
+}
+
+#contato{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto;
+    background-color: dimgray;
+    margin-bottom: 0px;
+    text-align:center;
+}
+
+#contato a{
+    width:50%;
+    text-align: center;
+    font-size: 4mm;
+    margin:0 auto;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #363636;
+}
+
+#div-tel{
+    margin: 10px;
+}
+
+#tel{
+    
+    text-decoration: none;
+}
+
+#titulo-contato{
+    padding: 10px;
+    border-bottom: solid 2px dimgray;
+    font-size: 3rem;
+    width: auto;
+    color: #363636;
+}
+
+@media screen and (max-width: 600px){
+    #header{width:100vw; height: 8%;}
+    #video-background{width: 100vw;}
+    #logo{height: 28%;}
+    #logo-img{width: 15%;}
+    #servicos-2{display: flex; flex-direction: column; align-items: center;}
+    #div-servico-1{border: none;}
+    .div-servico{width: 90%; margin: 10px 0px;}
+    .icone{width: 13%;}
+    #contato
+    #mapa{
+        height: 20%;
+    }
+
+    /* começa aqui o menu mobile */
+    #btn-mobile{
+        display:block;
+        position:relative;
+        left: 0px;
+        border: none;
+        margin: 15px;
+        font-size: 1.5rem;
+        color:#DAA520;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    #header{
+        display:flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+    }
+
+    #menu-desktop{
+        display: flex;
+        height: 5px;
+        overflow: hidden;
+        flex-direction: column;
+        margin: 0;
+        transition: .6s;
+    }
+
+    #menu-desktop a{
+        margin:0;
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    #header.active #menu-desktop{
+        display:flex;
+        height: 50vh;
+    }
+
+}
